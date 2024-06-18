@@ -1,5 +1,4 @@
 # Base configs
-# baseurl: "https://photography.rampatra.com"
 baseurl: "https://2after5.com"
 #baseurl: "" # Comment the above line and uncomment this to test the website locally
 image_fulls_loc: "/images/fulls"
@@ -15,15 +14,15 @@ header:
  subtitle: "by Prithiv Mohan"
 footer:
  name: "Hey there, my name is Prithiv"
- bio: "I am a professional photographer."
+ bio: "Hi, I'm Prithiv Mohan, a passionate photographer with a keen eye for capturing the beauty in everyday moments. Over the past decade, I've explored and documented the world around me, creating a diverse portfolio that you can explore on 2after5.com. My work ranges from breathtaking landscapes and intimate portraits to vibrant urban scenes and lively events, each photograph telling a unique story and evoking emotions. Photography, for me, is about more than just taking pictures; it's about finding beauty in both the ordinary and extraordinary, and I hope my work resonates with you and brings a little more beauty into your life."
  github: ""
 web_design: ""
 # Configure which exif data to display
 # Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
 exif: '[{"tag": "Model", "icon": "camera-retro"}, {"tag": "FNumber", "icon": "dot-circle-o"}, {"tag": "ExposureTime", "icon": "clock-o"}, {"tag": "ISOSpeedRatings", "icon": "info-circle"}]'
 social_urls:
-#  twitter: "https://www.twitter.com/ram__patra"
   instagram: "https://www.instagram.com/2after5"
+#  twitter: "https://www.twitter.com/ram__patra"
 #  dribbble: "https://dribbble.com/rampatra"
 #  linkedin: "https://in.linkedin.com/in/ram-patra"
 #  github: "https://www.github.com/rampatra"
