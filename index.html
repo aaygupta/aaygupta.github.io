@@ -2,6 +2,54 @@
 layout: default
 ---
 
+<style>
+
+    .container {
+        margin: 0 auto;
+    }
+    .hero {
+        background: url('/assets/hero_bg.jpg') no-repeat center center/cover;
+        padding: 150px 20px;
+        color: white;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    .cta-button {
+        padding: 10px;
+        background-color: #47c5ab;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 20px;
+    }
+    .cta-button:hover {
+        background-color: #287e6d;
+    }
+    .about {
+        margin: 40px 100px;
+        text-align: justify;
+    }
+    .about h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .about p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+</style>
+
 <!-- Wrapper -->
 <div id="wrapper">
 
@@ -9,7 +57,7 @@ layout: default
     <header id="header">
         <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
         <nav>
-            <ul>
+            <ul class="navbar" id="navbar">
                 <li><a href="/commercial.html">Commercial</a></li>
                 <li><a href="/product.html">Product</a></li>
                 <li><a href="/lifestyle.html">Lifestyle</a></li>
@@ -17,104 +65,27 @@ layout: default
                 <li><a href="/others.html">Others</a></li>
                 <li><a href="#footer" class="icon fa-info-circle">About</a></li>
             </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </header>
 
     <!-- Main -->
     <div id="main" data-exif='{{ site.exif }}'>
-        {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
-        <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
-                     data-name="{{ image.name }}"/></a>
-            <!--<h2></h2>
-            <p></p>-->
-        </article>
-        {% endif %}
-        {% endfor %}
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="panel">
-        <div class="inner split">
-            <div>
-                <section>
-                    <h2>{{ site.footer.name }}</h2>
-                    <p>{{ site.footer.bio }}</p>
-                    <p>{{ site.footer.github }}</p>
-                </section>
-                <section>
-                    <h2>Follow me on ...</h2>
-                    <ul class="icons">
-                        {% if site.social_urls.facebook %}
-                            <li>
-                                <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
-                                    <span class="label">Facebook</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.twitter %}
-                            <li>
-                                <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
-                                    <span class="label">Twitter</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.instagram %}
-                            <li>
-                                <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
-                                    <span class="label">Instagram</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.dribbble %}
-                            <li>
-                                <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.github %}
-                            <li>
-                                <a href="{{ site.social_urls.github }}" class="icon fa-github">
-                                    <span class="label">GitHub</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                        {% if site.social_urls.linkedin %}
-                            <li>
-                                <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
-                                    <span class="label">LinkedIn</span>
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </section>
-                <p class="copyright">
-                    &copy; {{ site.author }}.
-                </p>
+        <div class="container">
+            <div class="hero">
+                <h1>Welcome to <strong>2after5</strong></h1>
+                <p>Capturing moments, one click at a time. Discover the world through the lens of Prithiv.</p>
+                <a href="#footer" class="cta-button">Learn More</a>
             </div>
-            <div>
-                <section>
-                    <h2>Get in touch</h2>
-                    <form method="POST" action="https://formspree.io/f/xdoqqrae">
-                        <div class="field half first">
-                            <input type="text" name="name" id="name" placeholder="Name"/>
-                        </div>
-                        <div class="field half">
-                            <input type="email" name="email" id="email" placeholder="Email"/>
-                        </div>
-                        <div class="field">
-                            <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
-                        </div>
-                        <ul class="actions">
-                            <li><button type="submit" class="special">Send</button></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </section>
+            <div class="about" id="about">
+                <h2>About Prithiv</h2>
+                <div style="display: flex">
+                    <img src="assets/prithiv_mohan.jpg" alt="Prithiv" style="max-height: 300px;width: auto;margin-right: 20px;" />
+                    <p>Hello! I'm a passionate photographer dedicated to capturing the beauty and essence of the world around us. Through my photography, I aim to tell stories and share unique perspectives that inspire and connect people. Join me on this visual journey as I explore different subjects, from stunning landscapes to intimate portraits. Welcome to my world of photography at 2after5.com.</p>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
 </div>

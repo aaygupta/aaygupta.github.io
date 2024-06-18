@@ -1,3 +1,95 @@
+<!-- Footer -->
+<footer id="footer" class="panel">
+    <div class="inner split">
+        <div>
+            <section>
+                <h2>{{ site.footer.name }}</h2>
+                <div style="display: flex;flex-wrap: wrap;margin-top: 20px;">
+                    <img src="../assets/prithiv_mohan.jpg" alt="Prithiv Mohan" style="max-height: 150px;width: auto;margin-right: 20px;" />
+                    <p style="flex: 1;text-align: justify;">Hi, I'm a passionate photographer with a keen eye for capturing the beauty in everyday moments.
+                        Over the past decade, I've explored and documented the world around me, creating a diverse portfolio that you can explore on 2after5.com. <br><br>
+                    </p>
+                </div>
+                <p style="text-align: justify">
+                    My work ranges from breathtaking landscapes and intimate portraits to vibrant urban scenes and lively events, each photograph telling a unique story and evoking emotions.
+                    Photography, for me, is about more than just taking pictures; it's about finding beauty in both the ordinary and extraordinary,
+                    and I hope my work resonates with you and brings a little more beauty into your life.
+                </p>
+            </section>
+            <section>
+                <h2>Follow me on ...</h2>
+                <ul class="icons">
+                    {% if site.social_urls.facebook %}
+                    <li>
+                        <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
+                            <span class="label">Facebook</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.social_urls.twitter %}
+                    <li>
+                        <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
+                            <span class="label">Twitter</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.social_urls.instagram %}
+                    <li>
+                        <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
+                            <span class="label">Instagram</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.social_urls.dribbble %}
+                    <li>
+                        <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
+                            <span class="label">Dribbble</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.social_urls.github %}
+                    <li>
+                        <a href="{{ site.social_urls.github }}" class="icon fa-github">
+                            <span class="label">GitHub</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if site.social_urls.linkedin %}
+                    <li>
+                        <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
+                            <span class="label">LinkedIn</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </section>
+            <p class="copyright">
+                &copy; {{ site.author }}.
+            </p>
+        </div>
+        <div>
+            <section>
+                <h2>Get in touch</h2>
+                <form method="POST" action="https://formspree.io/f/xdoqqrae">
+                    <div class="field half first">
+                        <input type="text" name="name" id="name" placeholder="Name"/>
+                    </div>
+                    <div class="field half">
+                        <input type="email" name="email" id="email" placeholder="Email"/>
+                    </div>
+                    <div class="field">
+                        <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+                    </div>
+                    <ul class="actions">
+                        <li><button type="submit" class="special">Send</button></li>
+                        <li><input type="reset" value="Reset"/></li>
+                    </ul>
+                </form>
+            </section>
+        </div>
+    </div>
+</footer>
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.poptrox.js"></script>

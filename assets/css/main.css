@@ -1477,6 +1477,15 @@
 							background-color: #242629;
 						}
 
+						#header nav > .icon {
+							display: none;
+							color: white;
+							float: right;
+							padding: 15px 20px;
+							font-size: 24px;
+							cursor: pointer;
+						}
+
 	@media screen and (max-width: 736px) {
 
 		body {
@@ -1509,6 +1518,23 @@
 				font-size: 0.9em;
 				padding: 0 1.15em;
 			}
+
+		#header nav > ul > li {
+			display: none;
+		}
+
+		#header nav > ul.navbar.responsive {
+			display: block;
+		}
+
+		#header nav > ul.navbar.responsive li {
+			display: block;
+			text-align: center;
+		}
+
+		#header nav > .icon {
+			display: block;
+		}
 
 	}
 
