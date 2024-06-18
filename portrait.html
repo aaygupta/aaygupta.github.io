@@ -23,10 +23,10 @@ layout: default
     <!-- Main -->
     <div id="main" data-exif='{{ site.exif }}'>
         {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
+        {% if image.path contains 'images/fulls/Portrait' %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/Portrait/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/Portrait/{{ image.name }}" alt=""
                      data-name="{{ image.name }}"/></a>
             <!--<h2></h2>
             <p></p>-->
@@ -109,7 +109,7 @@ layout: default
                             <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
                         </div>
                         <ul class="actions">
-                            <li><button type="submit" class="special">Send</button></li>
+                            <li><input type="submit" value="Send" class="special"/></li>
                             <li><input type="reset" value="Reset"/></li>
                         </ul>
                     </form>

@@ -10,11 +10,11 @@ layout: default
         <h1><a href="index.html"><strong>{{ site.header.title }}</strong> {{ site.header.subtitle }}</a></h1>
         <nav>
             <ul>
-                <li><a href="#footer">Commercial</a></li>
-                <li><a href="#footer">Product</a></li>
-                <li><a href="#footer">Lifestyle</a></li>
-                <li><a href="#footer">Portraits</a></li>
-                <li><a href="#footer">Others</a></li>
+                <li><a href="/commercial.html">Commercial</a></li>
+                <li><a href="/product.html">Product</a></li>
+                <li><a href="/lifestyle.html">Lifestyle</a></li>
+                <li><a href="/portrait.html">Portrait</a></li>
+                <li><a href="/others.html">Others</a></li>
                 <li><a href="#footer" class="icon fa-info-circle">About</a></li>
             </ul>
         </nav>
@@ -23,10 +23,10 @@ layout: default
     <!-- Main -->
     <div id="main" data-exif='{{ site.exif }}'>
         {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
+        {% if image.path contains 'images/fulls/Commercial' %}
         <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/Commercial/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/Commercial/{{ image.name }}" alt=""
                      data-name="{{ image.name }}"/></a>
             <!--<h2></h2>
             <p></p>-->
