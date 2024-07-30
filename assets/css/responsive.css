@@ -1,0 +1,94 @@
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        background: url('/assets/hero_bg.jpg') no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        width: 100vw;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .about {
+        margin: 20px 20px;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        display: block;
+        text-align: center;
+    }
+
+    .about-content img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar.responsive {
+        display: block;
+        position: absolute;
+        top: 58px;
+        width: 100%;
+        background-color: #333;
+        margin-left: -82px !important;
+    }
+
+    .navbar.responsive li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar.responsive li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .footer-about {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-about img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-about p {
+        text-align: justify;
+    }
+}
