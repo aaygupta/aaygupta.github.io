@@ -17,7 +17,15 @@
     }
 
     .about {
-        margin: 20px 20px;
+        margin: 20px 20px !important;
+    }
+
+    .about > div {
+        display: block !important;
+    }
+
+    .about > div > img {
+        margin-bottom: 20px;
     }
 
     .about h2 {
@@ -42,7 +50,6 @@
         display: block;
         position: absolute;
         top: 58px;
-        width: 100%;
         background-color: #333;
         margin-left: -82px !important;
     }
@@ -58,6 +65,11 @@
         color: white;
         text-decoration: none;
     }
+
+    .footer .intro > div {
+        display: block !important;
+    }
+
 }
 
 @media (max-width: 480px) {
